@@ -1,0 +1,14 @@
+[Unit]
+Description=online-radio
+After=network.target
+
+[Service]
+Type=forking
+User=online-radio
+Group=online-radio
+UMask=002
+ExecStart=ezstream -c /etc/icecast2/ezstream.xml
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

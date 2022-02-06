@@ -1,0 +1,14 @@
+[Unit]
+Description=python-scripts
+After=network.target
+
+[Service]
+Type=forking
+User=python-scripts
+Group=python-scripts
+UMask=002
+ExecStartPre=python3 /home/python-scripts/
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

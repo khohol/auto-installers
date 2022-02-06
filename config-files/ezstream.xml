@@ -1,0 +1,24 @@
+<ezstream>
+Адрес Icecast
+    <url>http://localhost:8000/stream</url>
+Пароль авторизации источника
+    <sourcepassword>!password!</sourcepassword>
+Формат передаваемых данных
+    <format>MP3</format>
+Путь к плейлисту
+    <filename>/home/online-radio/playlist.txt</filename>
+Флаг того, является плейлист программой. Если "1", то будет
+произведён запуск, плейлист должен выдать путь к файлу
+для вещания
+    <playlist_program>0</playlist_program>
+Перемешивать ли песни
+    <shuffle>1</shuffle>
+Мета-данные о канале
+    <svrinfoname>online-radio</svrinfoname>
+    <svrinfogenre>online-radio</svrinfogenre>
+    <svrinfodescription>online-radio</svrinfodescription>
+Настройки перекодирования. Мне не нужны.
+    <reencode>
+        <enable>0</enable>
+    </reencode>
+</ezstream>
