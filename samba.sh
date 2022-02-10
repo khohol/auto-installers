@@ -5,4 +5,5 @@ sudo cp config-files/smb.conf /etc/samba/;
 echo "/etc/samba/smb.conf";
 echo "Print samba password";
 sudo smbpasswd -a root;
-sudo systemctl restart smbd;
+sudo systemctl enable smbd;
+sudo systemctl start smbd;
