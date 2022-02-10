@@ -1,0 +1,11 @@
+[Unit]
+Description=Mount 80GB drive
+
+[Mount]
+What=/dev/sda1
+Where=/mnt/80GB
+Type=ext4
+Options=users,rw,exec,auto
+
+[Install]
+WantedBy=multi-user.target
