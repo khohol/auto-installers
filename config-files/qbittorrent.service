@@ -5,10 +5,9 @@ After=network.target
 [Service]
 Type=forking
 User=qbittorrent
-Group=qbittorrent
 UMask=002
 ExecStart=/usr/bin/qbittorrent-nox -d --webui-port=8001
-Restart=on-failure
+Restart=always
 
 [Install]
 WantedBy=multi-user.target
