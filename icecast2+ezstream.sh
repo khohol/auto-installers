@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo mv config-files/ezstream.xml /opt/
+sudo mv config-files/online-radio.service /opt/
 echo "Installing icecast2. Please, configure it";
 sudo apt-get install icecast2 -y;
 sudo systemctl enable icecast2;
@@ -22,11 +24,11 @@ make;
 sudo make install;
 echo "Check version!";
 ezstream -V;
-echo "Copy file from config-files/ezstream.xml to /etc/icecast2/";
+sudo mv /opt/ezstream.xml /etc/icecast2/
 echo "Set your local IP in file and icecast2 password";
-echo "Copy service from config-files/online-radio.service to /etc/systemd/system/";
-echo "sudo systemctl start online-radio";
-echo "sudo systemctl status online-radio";
-echo "sudo systemctl enable online-radio";
+sudo mv /opt/online-radio.service /etc/systemd/system/
+sudo systemctl enable online-radio;
+sudo systemctl start online-radio;
+sudo systemctl status online-radio;
 echo "icecast2 menu: http://[your_ip]:8000";
 echo "stream: http://[your_ip]:8000/stream";
